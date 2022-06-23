@@ -1,6 +1,6 @@
 # jadonhansen-website
 
--	Showcase of my personal website developed with React & Typescipt.
+Showcase of my personal website developed with React & Typescipt.
 
 # Stack
 
