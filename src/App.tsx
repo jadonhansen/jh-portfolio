@@ -1,9 +1,17 @@
 import React from "react";
-import "./App.scss";
+import { Outlet } from "react-router-dom";
+
+import Navigation from "./components/Navigation";
+import Navbar from "./components/Navbar";
+
+import "./styles/app.scss";
 
 function App() {
 	return (
-		<div className="App">
+		<div className="appContainer">
+			<Navbar />
+			<Navigation />
+			<Outlet />
 		</div>
 	);
 }

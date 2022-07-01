@@ -1,0 +1,21 @@
+.navWrapper {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	margin-bottom: 3rem;
+
+	nav {
+		text-align: center;
+
+		a {
+			padding: 0 1rem;
+			text-decoration: none;
+		}
+
+		.active {
+			text-decoration: underline;
+			text-underline-offset: 10px;
+			color: white;
+		}
+	}
+}
