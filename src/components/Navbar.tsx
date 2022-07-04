@@ -11,7 +11,7 @@ export default function Navbar() {
 			<nav>
 				<Link to="/" className={pathname == "/" ? "active" : undefined}>Home</Link>
 				<Link to="/tech" className={pathname == "/tech" ? "active" : undefined}>Tech</Link>
-				<Link to="/creativity" className={pathname == "/creativity" ? "active" : undefined}>Creativity</Link>
+				<Link to="/creative" className={pathname == "/creative" ? "active" : undefined}>Creative</Link>
 			</nav>
 		</div>
 	);

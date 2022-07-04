@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
-import Creativity from "../pages/Creativity";
+import Creative from "../pages/Creative";
 import Home from "../pages/Home";
 import Tech from "../pages/Tech";
 
@@ -10,7 +10,7 @@ export default function Navigation() {
 		<Routes>
 			<Route path="/" element={<Home />} />
 			<Route path="/tech" element={<Tech />} />
-			<Route path="/creativity" element={<Creativity />} />
+			<Route path="/creative" element={<Creative />} />
 		</Routes>
 	);
 }
