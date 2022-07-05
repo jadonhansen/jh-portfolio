@@ -4,32 +4,66 @@ import "../styles/tech.scss";
 
 export default function Tech() {
 	return (
-		<div className="container">
+		<div className="container tech">
 			<div className="row">
-				<div className="col">
-					<h1>Tech.</h1>
-					<h5>Otherwise known as work or passion projects.</h5>
+
+				<div className="col header-col">
+					<div className="header-box">
+						<h1>Tech.</h1>
+						<h5>Otherwise known as work or passion projects.</h5>
+					</div>
 				</div>
-				<div className="col-6">
-					<div className="row row-cols-2">
-						<div className="col">
-							<p>All my apps an app which does this and that and all cool things which we love to see. Check it out here and here broski.</p>
+
+				<div className="col-6 content-col">
+					<div className="row row-cols-2 scroll-box">
+
+						<div className="col left">
+							<div className="text-box">
+								<p>GitHub. The well known place where all developers worth their salt store some next generation super secret code...shh.</p>
+								<a href="https://github.com/jadonhansen" target="_blank" rel="noreferrer" className="icon">
+									<img src={require("../assets/images/github.png")} />
+								</a>
+							</div>
 						</div>
-						<div className="col">
-							<p>Photo</p>
+
+						<div className="col github right"></div>
+
+						<div className="col apps left"></div>
+
+						<div className="col right">
+							<div className="text-box">
+								<p>Building fluid and pleasing mobile applications has always been a goal of mine. See my apps portfolio to view all of the iOS and Android apps I have brought to life with React Native.</p>
+								<a href="https://apps.jadonhansen.co.za/" target="_blank" rel="noreferrer" className="icon">
+									<img src={require("../assets/images/smartphone.png")} />
+								</a>
+							</div>
 						</div>
-						<div className="col">
-							<p>Photo 2</p>
+
+						<div className="col left">
+							<div className="text-box">
+								<p>I have recently started a series of articles teaching the basics and intricacies of React Native as well as Expo. Check it out, you might learn something!</p>
+								<a href="https://blog.jadonhansen.co.za/" target="_blank" rel="noreferrer" className="icon">
+									<img className="edit-img" src={require("../assets/images/blog.png")} />
+								</a>
+							</div>
 						</div>
-						<div className="col">
-							<p>GitHub and stuff which does this and that and all cool things which we love to see. Check it out here and here broski.</p>
+
+						<div className="col blog right"></div>
+
+						<div className="col kofi left"></div>
+
+						<div className="col right">
+							<div className="text-box">
+								<div>
+									<p>Developers need sustenance too! Support me on Ko-Fi and donate or buy me a coffee so that I can keep producing some high quality apps for everyone.</p>
+									<p>Scan the QR code or tap the coffee icon below.</p>
+								</div>
+								<a href="https://ko-fi.com/jadonhansen" target="_blank" rel="noreferrer" className="icon">
+									<img className="edit-img" src={require("../assets/images/coffee.png")} />
+								</a>
+							</div>
 						</div>
-						<div>
-							<p>Here is my tech blog which does this and that and all cool things which we love to see. Check it out here and here broski.</p>
-						</div>
-						<div className="col">
-							<p>Photo</p>
-						</div>
+
 					</div>
 				</div>
 			</div>

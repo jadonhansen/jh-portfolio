@@ -4,18 +4,29 @@
 	bottom: 0;
 	margin-bottom: 3rem;
 
+	// to counter the gradient in tech
+	z-index: 100;
+
 	nav {
 		text-align: center;
 
 		a {
-			padding: 0 1rem;
+			padding-bottom: 0.625rem;
+			margin: 0 1rem;
 			text-decoration: none;
 		}
 
 		.active {
-			text-decoration: underline;
-			text-underline-offset: 10px;
+			color: rgb(87, 229, 236);
+			border-bottom: 1px solid rgb(87, 229, 236);
+		}
+
+		a:hover {
 			color: white;
+
+			&.active {
+				color: rgb(87, 229, 236);
+			}
 		}
 	}
 }

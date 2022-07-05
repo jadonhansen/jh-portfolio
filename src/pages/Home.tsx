@@ -4,7 +4,7 @@ import "../styles/home.scss";
 
 export default function Home() {
 	return (
-		<div className="container">
+		<div className="container home">
 			<div className="row">
 				<div className="col">
 					<h1>This is me.</h1>
