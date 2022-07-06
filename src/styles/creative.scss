@@ -1,0 +1,28 @@
+.home {
+	height: 100vh;
+
+	.row {
+		height: 100%;
+
+		.header-col {
+			display: flex;
+			justify-content: center;
+
+			.header-box {
+				padding-top: 14rem;
+
+				.subheading-box {
+					display: flex;
+					flex-direction: row;
+
+					.line {
+						border-top: 4px solid white;
+						width: 30px;
+						margin-right: 2rem;
+						align-self: center;
+					}
+				}
+			}
+		}
+	}
+}

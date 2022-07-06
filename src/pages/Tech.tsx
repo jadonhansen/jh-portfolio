@@ -10,7 +10,10 @@ export default function Tech() {
 				<div className="col header-col">
 					<div className="header-box">
 						<h1>Tech.</h1>
-						<h5>Otherwise known as work or passion projects.</h5>
+						<div className="subheading-box">
+							<p className="line"></p>
+							<p>Otherwise known as work or passion projects.</p>
+						</div>
 					</div>
 				</div>
 
@@ -26,9 +29,21 @@ export default function Tech() {
 							</div>
 						</div>
 
-						<div className="col github right"></div>
+						<div className="col github right">
+							<div className="overlay">
+								<button>
+									<a href="https://github.com/jadonhansen" target="_blank" rel="noreferrer">View projects</a>
+								</button>
+							</div>
+						</div>
 
-						<div className="col apps left"></div>
+						<div className="col apps left">
+							<div className="overlay">
+								<button>
+									<a href="https://apps.jadonhansen.co.za/" target="_blank" rel="noreferrer">View apps</a>
+								</button>
+							</div>
+						</div>
 
 						<div className="col right">
 							<div className="text-box">
@@ -48,9 +63,21 @@ export default function Tech() {
 							</div>
 						</div>
 
-						<div className="col blog right"></div>
+						<div className="col blog right">
+							<div className="overlay">
+								<button>
+									<a href="https://blog.jadonhansen.co.za/" target="_blank" rel="noreferrer">View articles</a>
+								</button>
+							</div>
+						</div>
 
-						<div className="col kofi left"></div>
+						<div className="col kofi left">
+							<div className="overlay">
+								<button>
+									<a href="https://ko-fi.com/jadonhansen" target="_blank" rel="noreferrer">Donate</a>
+								</button>
+							</div>
+						</div>
 
 						<div className="col right">
 							<div className="text-box">
@@ -59,7 +86,7 @@ export default function Tech() {
 									<p>Scan the QR code or tap the coffee icon below.</p>
 								</div>
 								<a href="https://ko-fi.com/jadonhansen" target="_blank" rel="noreferrer" className="icon">
-									<img className="edit-img" src={require("../assets/images/coffee.png")} />
+									<img src={require("../assets/images/coffee.png")} />
 								</a>
 							</div>
 						</div>

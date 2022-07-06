@@ -4,30 +4,47 @@
 	.row {
 		height: 100%;
 
-		h1 {
-			text-align: center;
-			margin-top: 14rem;
-		}
+		.header-col {
+			display: flex;
+			justify-content: center;
 
-		.curve {
-			// background-color: green;
-			width: 100px;
-			height: 300px;
-			border: solid 1px white;
-			border-color: transparent white transparent transparent;
-			border-radius: 0 50% 50% 0/0 60% 60% 0;
+			.header-box {
+				padding-top: 14rem;
+
+				.subheading-box {
+					display: flex;
+					flex-direction: row;
+
+					.line {
+						border-top: 4px solid white;
+						width: 30px;
+						margin-right: 2rem;
+						align-self: center;
+					}
+				}
+			}
 		}
 
 		.col-content {
 			display: flex;
 			margin: auto;
-		}
+			// background-color: pink;
 
-		.labels {
-			margin: auto 2rem;
+			.curve {
+				// background-color: green;
+				width: 100px;
+				height: 300px;
+				border: solid 1px white;
+				border-color: transparent white transparent transparent;
+				border-radius: 0 50% 50% 0/0 60% 60% 0;
+			}
 
-			p:hover {
-				transform: scale(1.1);
+			.labels {
+				margin: auto 2rem;
+	
+				p:hover {
+					transform: scale(1.1);
+				}
 			}
 		}
 	}
