@@ -1,4 +1,4 @@
-.home {
+.creative {
 	height: 100vh;
 
 	.row {
@@ -23,6 +23,71 @@
 					}
 				}
 			}
+		}
+
+		.col-content {
+
+			.row {
+				min-width: 100%;
+
+				.col {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					padding-bottom: 10rem;
+				}
+
+				.icon {
+					display: flex;
+					justify-content: space-between;
+					text-decoration: none;
+					align-items: flex-end;
+
+					img {
+						width: 22px;
+						height: 22px;
+					}
+				}
+
+				.icon:hover {
+					color: white;
+
+					img {
+						transform: scale(1.1);
+					}
+				}
+
+				.ig {
+					height: 60%;
+					display: flex;
+					align-items: flex-end;
+					padding: 1rem;
+					background: linear-gradient(to top, rgba(8, 8, 8), rgb(0,0,0,0), rgb(0,0,0,0)), url("../assets/images/cody.jpg");
+					background-size: cover;
+					background-repeat: no-repeat;
+				}
+
+				.dev-ig {
+					height: 60%;
+					display: flex;
+					align-items: flex-end;
+					padding: 1rem;
+					background: linear-gradient(to top, rgba(8, 8, 8), rgb(0,0,0,0), rgb(0,0,0,0)), url("../assets/images/cody.jpg");
+					background-size: cover;
+					background-repeat: no-repeat;
+				}
+
+				.youtube {
+					height: 60%;
+					display: flex;
+					align-items: flex-end;
+					padding: 1rem;
+					background: linear-gradient(to top, rgba(8, 8, 8), rgb(0,0,0,0), rgb(0,0,0,0)), url("../assets/images/cody.jpg");
+					background-size: cover;
+					background-repeat: no-repeat;
+				}
+			}
+
 		}
 	}
 }
