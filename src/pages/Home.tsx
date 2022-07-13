@@ -6,7 +6,6 @@ export default function Home() {
 	return (
 		<div className="container home">
 			<div className="row">
-
 				<div className="col header-col">
 					<div className="header-box">
 						<h1>This is me.</h1>
@@ -17,7 +16,7 @@ export default function Home() {
 					</div>
 				</div>
 
-				<div className="col-6 col-content">
+				<div className="col col-content">
 					<div className="curve"></div>
 					<div className="labels">
 						<p>Developer</p>

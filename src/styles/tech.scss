@@ -26,13 +26,11 @@
 		}
 
 		.content-col {
-			// padding-top: 1rem;
-
 			.row {
 				min-width: 100%;
 				height: 100vh;
 				overflow: auto;
-				padding-bottom: 5rem;
+				padding-bottom: 7rem;
 
 				.col {
 					overflow: hidden;
@@ -61,6 +59,11 @@
 
 					.subheading {
 						color: grey;
+						margin: 0;
+					}
+
+					.code-subheading {
+						color: rgb(161, 160, 160);
 						margin: 0;
 					}
 

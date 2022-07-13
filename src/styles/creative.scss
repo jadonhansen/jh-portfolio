@@ -39,11 +39,12 @@
 
 				.icon {
 					display: flex;
-					justify-content: space-between;
 					text-decoration: none;
+					padding-top: 1rem;
 					align-items: flex-end;
 
 					img {
+						margin-right: 0.4rem;
 						width: 22px;
 						height: 22px;
 					}
@@ -58,31 +59,34 @@
 				}
 
 				.ig {
+					border-radius: 10px;
 					height: 60%;
 					display: flex;
 					align-items: flex-end;
 					padding: 1rem;
-					background: linear-gradient(to top, rgba(8, 8, 8), rgb(0,0,0,0), rgb(0,0,0,0)), url("../assets/images/cody.jpg");
+					background: linear-gradient(to top, rgba(8, 8, 8), rgb(8, 8, 8, 0.1)), url("../assets/images/ig.jpg");
 					background-size: cover;
 					background-repeat: no-repeat;
 				}
 
 				.dev-ig {
+					border-radius: 10px;
 					height: 60%;
 					display: flex;
 					align-items: flex-end;
 					padding: 1rem;
-					background: linear-gradient(to top, rgba(8, 8, 8), rgb(0,0,0,0), rgb(0,0,0,0)), url("../assets/images/cody.jpg");
+					background: linear-gradient(to top, rgba(8, 8, 8), rgb(8, 8, 8, 0.1)), url("../assets/images/dev_ig.jpg");
 					background-size: cover;
 					background-repeat: no-repeat;
 				}
 
 				.youtube {
+					border-radius: 10px;
 					height: 60%;
 					display: flex;
 					align-items: flex-end;
 					padding: 1rem;
-					background: linear-gradient(to top, rgba(8, 8, 8), rgb(0,0,0,0), rgb(0,0,0,0)), url("../assets/images/cody.jpg");
+					background: linear-gradient(to top, rgba(8, 8, 8), rgb(8, 8, 8, 0.1)), url("../assets/images/rs_1.jpg");
 					background-size: cover;
 					background-repeat: no-repeat;
 				}
