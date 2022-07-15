@@ -1,16 +1,17 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
 
 import Creative from "../pages/Creative";
 import Home from "../pages/Home";
 import Tech from "../pages/Tech";
 
-export default function Navigation() {
+export default function Navigation(props: any) {
+	const pages = props.pages;
+
 	return (
-		<Routes>
-			<Route path="/" element={<Home />} />
-			<Route path="/tech" element={<Tech />} />
-			<Route path="/creative" element={<Creative />} />
-		</Routes>
+		<div style={{ display: "flex", width: "100vw", overflow: "hidden" }}>
+			<Home pages={pages} />
+			<Tech pages={pages} />
+			<Creative pages={pages} />
+		</div>
 	);
 }

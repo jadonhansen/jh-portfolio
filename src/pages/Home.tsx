@@ -1,10 +1,36 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
 
 import "../styles/home.scss";
 
-export default function Home() {
+export default function Home(props: any) {
+	const { current, previous } = props.pages;
+
+	const animation = useAnimation();
+
+	useEffect(() => {
+		if (current == "home") {
+			animation.start({
+				x: 0,
+				transition: {
+					duration: 1,
+					ease: [0.87, 0, 0.13, 1],
+				},
+			});
+		} else {
+			animation.start({
+				x: "-100vw",
+				transition: {
+					duration: 1,
+					ease: [0.87, 0, 0.13, 1],
+				}
+			});
+		}
+	}, [current]);
+
+
 	return (
-		<div className="container home">
+		<motion.div className="container home" animate={animation}>
 			<div className="row">
 				<div className="col header-col">
 					<div className="header-box">
@@ -27,6 +53,6 @@ export default function Home() {
 					</div>
 				</div>
 			</div>
-		</div>
+		</motion.div>
 	);
 }

@@ -1,8 +1,10 @@
 .creative {
 	height: 100vh;
+	min-width: 100vw;
 
 	.row {
 		height: 100%;
+		min-width: 100vw;
 
 		.header-col {
 			display: flex;

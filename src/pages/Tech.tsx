@@ -1,10 +1,35 @@
-import React from "react";
+import React, {useEffect} from "react";
+import { motion, useAnimation } from "framer-motion";
 
 import "../styles/tech.scss";
 
-export default function Tech() {
+export default function Tech(props: any) {
+	const { current, previous } = props.pages;
+
+	const animation = useAnimation();
+
+	useEffect(() => {
+		if (current == "tech") {
+			animation.start({
+				x: previous == "home" ? "-100vw" : "100vw",
+				transition: {
+					duration: 1,
+					ease: [0.87, 0, 0.13, 1],
+				},
+			});
+		} else {
+			animation.start({
+				x: current == "home" ? "100vw" : "-200vw",
+				transition: {
+					duration: 1,
+					ease: [0.87, 0, 0.13, 1],
+				}
+			});
+		}
+	}, [current]);
+
 	return (
-		<div className="container tech">
+		<motion.div className="container tech" animate={animation}>
 			<div className="row">
 				<div className="col header-col">
 					<div className="header-box">
@@ -106,6 +131,6 @@ export default function Tech() {
 					</div>
 				</div>
 			</div>
-		</div>
+		</motion.div>
 	);
 }
