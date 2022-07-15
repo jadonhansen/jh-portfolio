@@ -14,16 +14,16 @@ export default function Creative(props: ComponentProps) {
 			animation.start({
 				x: "-200vw",
 				transition: {
-					duration: 1,
-					ease: [0.87, 0, 0.13, 1],
+					duration: 1.2,
+					ease: [0.76, 0, 0.24, 1],
 				},
 			});
 		} else {
 			animation.start({
 				x: "200vw",
 				transition: {
-					duration: 1,
-					ease: [0.87, 0, 0.13, 1],
+					duration: 1.2,
+					ease: [0.76, 0, 0.24, 1],
 				}
 			});
 		}

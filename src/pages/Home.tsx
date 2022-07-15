@@ -14,16 +14,16 @@ export default function Home(props: ComponentProps) {
 			animation.start({
 				x: 0,
 				transition: {
-					duration: 1,
-					ease: [0.87, 0, 0.13, 1],
+					duration: 1.2,
+					ease: [0.76, 0, 0.24, 1],
 				},
 			});
 		} else {
 			animation.start({
 				x: "-100vw",
 				transition: {
-					duration: 1,
-					ease: [0.87, 0, 0.13, 1],
+					duration: 1.2,
+					ease: [0.76, 0, 0.24, 1],
 				}
 			});
 		}
@@ -32,7 +32,7 @@ export default function Home(props: ComponentProps) {
 	return (
 		<motion.div className="container home" animate={animation}>
 			<div className="row">
-				<div className="col header-col">
+				<div className="col-7 header-col">
 					<div className="header-box">
 						<h1>This is me.</h1>
 						<div className="subheading-box">
@@ -43,13 +43,15 @@ export default function Home(props: ComponentProps) {
 				</div>
 
 				<div className="col col-content">
-					<div className="curve"></div>
-					<div className="labels">
-						<p>Developer</p>
-						<p>Creator</p>
-						<p>Enthuisiast</p>
-						<p>Surfer</p>
-						<p>Human</p>
+					<div className="inner">
+						<div className="curve"></div>
+						<div className="labels">
+							<p>Developer</p>
+							<p>Creator</p>
+							<p>Enthuisiast</p>
+							<p>Surfer</p>
+							<p>Human</p>
+						</div>
 					</div>
 				</div>
 			</div>

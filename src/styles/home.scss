@@ -29,24 +29,29 @@
 
 		.col-content {
 			display: flex;
-			margin: auto;
+			margin-top: 11rem;
+			// margin: auto;
 			// background-color: pink;
 
-			.curve {
-				// background-color: green;
-				width: 100px;
-				height: 300px;
-				border: solid 1px white;
-				border-color: transparent white transparent transparent;
-				border-radius: 0 50% 50% 0/0 60% 60% 0;
-				margin-left: 5rem;
-			}
+			.inner {
+				display: flex;
+				height: fit-content;
 
-			.labels {
-				margin: auto 2rem;
-	
-				p:hover {
-					transform: scale(1.1);
+				.curve {
+					// background-color: green;
+					width: 100px;
+					height: 300px;
+					border: solid 1px grey;
+					border-color: transparent grey transparent transparent;
+					border-radius: 0 50% 50% 0/0 60% 60% 0;
+				}
+
+				.labels {
+					margin: auto 2rem;
+
+					p:hover {
+						transform: scale(1.1);
+					}
 				}
 			}
 		}

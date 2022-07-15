@@ -16,7 +16,7 @@ export default function Navbar(props: ComponentProps) {
 				width: "2.5rem",
 				transition: {
 					duration: 1,
-					ease: [0.87, 0, 0.13, 1],
+					ease: [0.76, 0, 0.24, 1],
 				},
 			});
 		}
@@ -26,7 +26,7 @@ export default function Navbar(props: ComponentProps) {
 				width: "2.1rem",
 				transition: {
 					duration: 1,
-					ease: [0.87, 0, 0.13, 1],
+					ease: [0.76, 0, 0.24, 1],
 				}
 			});
 		}
@@ -36,7 +36,7 @@ export default function Navbar(props: ComponentProps) {
 				width: "3.5rem",
 				transition: {
 					duration: 1,
-					ease: [0.87, 0, 0.13, 1],
+					ease: [0.76, 0, 0.24, 1],
 				}
 			});
 		}

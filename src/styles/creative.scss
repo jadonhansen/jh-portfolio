@@ -45,6 +45,7 @@
 					text-decoration: none;
 					padding-top: 1rem;
 					align-items: flex-end;
+					color: grey !important;
 
 					img {
 						margin-right: 0.4rem;
@@ -54,8 +55,6 @@
 				}
 
 				.icon:hover {
-					color: white;
-
 					img {
 						transform: scale(1.1);
 					}
