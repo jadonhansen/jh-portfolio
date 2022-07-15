@@ -1,10 +1,11 @@
 import React, {useEffect} from "react";
 import { motion, useAnimation } from "framer-motion";
 
+import { ComponentProps } from "../interfaces/interfaces";
 import "../styles/tech.scss";
 
-export default function Tech(props: any) {
-	const { current, previous } = props.pages;
+export default function Tech(props: ComponentProps) {
+	const { current, previous } = props;
 
 	const animation = useAnimation();
 

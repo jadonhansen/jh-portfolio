@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 
+import { ComponentProps } from "../interfaces/interfaces";
 import "../styles/home.scss";
 
-export default function Home(props: any) {
-	const { current, previous } = props.pages;
+export default function Home(props: ComponentProps) {
+	const { current } = props;
 
 	const animation = useAnimation();
 
@@ -27,7 +28,6 @@ export default function Home(props: any) {
 			});
 		}
 	}, [current]);
-
 
 	return (
 		<motion.div className="container home" animate={animation}>
