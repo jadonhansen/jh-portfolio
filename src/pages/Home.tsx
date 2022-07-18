@@ -30,7 +30,7 @@ export default function Home(props: ComponentProps) {
 	}, [current]);
 
 	return (
-		<motion.div className="container home" animate={animation}>
+		<motion.div className="home" animate={animation}>
 			<div className="row">
 				<div className="col-7 header-col">
 					<div className="header-box">

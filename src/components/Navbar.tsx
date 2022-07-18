@@ -47,7 +47,7 @@ export default function Navbar(props: ComponentProps) {
 	}
 
 	return (
-		<div className="navWrapper">
+		<div className="nav-wrapper">
 			<nav>
 				<a onClick={() => linkClick("home")} className={current == "home" ? "active" : undefined}>Home</a>
 				<a onClick={() => linkClick("tech")} className={current == "tech" ? "active" : undefined}>Tech</a>

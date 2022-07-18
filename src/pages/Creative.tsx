@@ -30,9 +30,9 @@ export default function Creative(props: ComponentProps) {
 	}, [current]);
 
 	return (
-		<motion.div className="container creative" animate={animation}>
+		<motion.div className="creative" animate={animation}>
 			<div className="row">
-				<div className="col header-col">
+				<div className="col-12 col-md-6 header-col">
 					<div className="header-box">
 						<h1>Creative.</h1>
 						<div className="subheading-box">
@@ -42,9 +42,9 @@ export default function Creative(props: ComponentProps) {
 					</div>
 				</div>
 
-				<div className="col-6 col-content">
+				<div className="col-12 col-md-6 col-content">
 					<div className="row row-cols-3">
-						<div className="col">
+						<div className="col-12 col-md-4">
 							<div className="ig">
 								<p>Photography, surfing, content creation and the more human side of me.</p>
 							</div>
@@ -53,7 +53,7 @@ export default function Creative(props: ComponentProps) {
 								@jadon.hansen
 							</a>
 						</div>
-						<div className="col">
+						<div className="col-12 col-md-4">
 							<div className="dev-ig">
 								<p>Follow my developer lifestlye and for updates on all of my projects.</p>
 							</div>
@@ -62,7 +62,7 @@ export default function Creative(props: ComponentProps) {
 								@developer.jadon
 							</a>
 						</div>
-						<div className="col">
+						<div className="col-12 col-md-4">
 							<div className="youtube">
 								<p>Check out my YouTube channel featuring POV style surfing sessions.</p>
 							</div>

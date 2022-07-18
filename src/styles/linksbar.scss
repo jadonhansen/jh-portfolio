@@ -20,3 +20,10 @@
 		transform: scale(1.1);
 	}
 }
+
+@media only screen and (max-width: 768px) {
+	.links-bar {
+		bottom: 1.8rem;
+		left: 2rem;
+	}
+}
