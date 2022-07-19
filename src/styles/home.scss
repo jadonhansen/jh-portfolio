@@ -28,10 +28,17 @@
 		}
 
 		.col-content {
-			display: flex;
-			margin-top: 11rem;
-			// margin: auto;
+			img {
+				height: 100%;
+				width: 100%;
+			}
+
+			// display: flex;
+			// margin-top: 11rem;
 			// background-color: pink;
+			// background-image: url("../assets/images/1.jpg");
+			// background-size: cover;
+			// background-repeat: no-repeat;
 
 			.inner {
 				display: flex;

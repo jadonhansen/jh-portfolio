@@ -43,7 +43,8 @@ export default function Home(props: ComponentProps) {
 				</div>
 
 				<div className="col col-content">
-					<div className="inner">
+					<img src={require("../assets/images/1.jpg")} />
+					{/* <div className="inner">
 						<div className="curve"></div>
 						<div className="labels">
 							<p>Developer</p>
@@ -52,7 +53,7 @@ export default function Home(props: ComponentProps) {
 							<p>Surfer</p>
 							<p>Human</p>
 						</div>
-					</div>
+					</div> */}
 				</div>
 			</div>
 		</motion.div>
