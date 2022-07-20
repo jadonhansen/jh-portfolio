@@ -32,7 +32,7 @@ export default function Home(props: ComponentProps) {
 	return (
 		<motion.div className="home" animate={animation}>
 			<div className="row">
-				<div className="col-7 header-col">
+				<div className="col-xs-12 col-md-7 header-col">
 					<div className="header-box">
 						<h1>This is me.</h1>
 						<div className="subheading-box">
@@ -43,17 +43,13 @@ export default function Home(props: ComponentProps) {
 				</div>
 
 				<div className="col col-content">
-					<img src={require("../assets/images/1.jpg")} />
-					{/* <div className="inner">
-						<div className="curve"></div>
-						<div className="labels">
-							<p>Developer</p>
-							<p>Creator</p>
-							<p>Enthuisiast</p>
-							<p>Surfer</p>
-							<p>Human</p>
-						</div>
-					</div> */}
+					<div className="overlay">
+						<p>Developer</p>
+						<p>Creator</p>
+						<p>Enthuisiast</p>
+						<p>Surfer</p>
+						<p>Human</p>
+					</div>
 				</div>
 			</div>
 		</motion.div>

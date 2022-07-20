@@ -46,7 +46,7 @@ export default function Creative(props: ComponentProps) {
 					<div className="row row-cols-3">
 						<div className="col-12 col-md-4">
 							<div className="ig">
-								<p>Photography, surfing, content creation and the more human side of me.</p>
+								<p>Surfing, content creation and the more human side of me.</p>
 							</div>
 							<a className="icon" href="https://www.instagram.com/jadon.hansen" target="_blank" rel="noreferrer">
 								<img src={require("../assets/icons/instagram.png")} />
@@ -55,7 +55,7 @@ export default function Creative(props: ComponentProps) {
 						</div>
 						<div className="col-12 col-md-4">
 							<div className="dev-ig">
-								<p>Follow my developer lifestlye and for updates on all of my projects.</p>
+								<p>Follow my developer lifestyle and for updates on all of my projects.</p>
 							</div>
 							<a className="icon" href="https://www.instagram.com/developer.jadon" target="_blank" rel="noreferrer">
 								<img src={require("../assets/icons/instagram.png")} />
