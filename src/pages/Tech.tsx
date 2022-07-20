@@ -44,7 +44,7 @@ export default function Tech(props: ComponentProps) {
 
 				<div className="col-12 col-md-6 content-col">
 					<div className="row row-cols-2">
-						<div className="col-12 col-md-6 left">
+						<div className="col-12 col-sm-6 left">
 							<div className="text-box">
 								<p className="code-subheading">The code</p>
 								<p>GitHub. The well known place where all developers worth their salt store some next generation super secret code...shh.</p>
@@ -54,7 +54,7 @@ export default function Tech(props: ComponentProps) {
 							</div>
 						</div>
 
-						<div className="col-12 col-md-6 github right">
+						<div className="col-12 col-sm-6 github right">
 							<div className="overlay">
 								<button>
 									<a href="https://github.com/jadonhansen" target="_blank" rel="noreferrer">
@@ -64,7 +64,7 @@ export default function Tech(props: ComponentProps) {
 							</div>
 						</div>
 
-						<div className="col-12 col-md-6 apps left">
+						<div className="col-12 col-sm-6 apps left">
 							<div className="overlay">
 								<button>
 									<a href="https://apps.jadonhansen.co.za/" target="_blank" rel="noreferrer">
@@ -74,7 +74,7 @@ export default function Tech(props: ComponentProps) {
 							</div>
 						</div>
 
-						<div className="col-12 col-md-6 right">
+						<div className="col-12 col-sm-6 right">
 							<div className="text-box">
 								<p className="subheading">Mobile apps</p>
 								<p>
@@ -87,7 +87,7 @@ export default function Tech(props: ComponentProps) {
 							</div>
 						</div>
 
-						<div className="col-12 col-md-6 left">
+						<div className="col-12 col-sm-6 left">
 							<div className="text-box">
 								<p className="subheading">Tutorial series</p>
 								<p>I have recently started a series of articles teaching the basics and intricacies of React Native as well as Expo. Check it out, you might learn something!</p>
@@ -97,7 +97,7 @@ export default function Tech(props: ComponentProps) {
 							</div>
 						</div>
 
-						<div className="col-12 col-md-6 blog right">
+						<div className="col-12 col-sm-6 blog right">
 							<div className="overlay">
 								<button>
 									<a href="https://blog.jadonhansen.co.za/" target="_blank" rel="noreferrer">
@@ -107,7 +107,7 @@ export default function Tech(props: ComponentProps) {
 							</div>
 						</div>
 
-						<div className="col-12 col-md-6 kofi left">
+						<div className="col-12 col-sm-6 kofi left">
 							<div className="overlay">
 								<button>
 									<a href="https://ko-fi.com/jadonhansen" target="_blank" rel="noreferrer">
@@ -117,7 +117,7 @@ export default function Tech(props: ComponentProps) {
 							</div>
 						</div>
 
-						<div className="col-12 col-md-6 right">
+						<div className="col-12 col-sm-6 right">
 							<div className="text-box last-text-box">
 								<p className="subheading">Show your support</p>
 								<p>

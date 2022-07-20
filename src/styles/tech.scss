@@ -51,23 +51,27 @@
 				overflow: auto;
 				padding-bottom: 7rem;
 
-				.col-12, .col-md-6 {
+				.left, .right {
 					overflow: hidden;
 					padding: 0;
 					min-height: calc(100vh / 3);
-				}
-
-				.left, .right {
 					border-left: 1.2px solid rgb(30, 30, 30);
 
 					.icon {
 						align-self: flex-start !important;
 					}
 				}
-		
+
 				@media only screen and (max-width: 768px) {
 					.left, .right {
 						border: none;
+						margin-bottom: 2rem;
+					}
+				}
+
+				@media only screen and (max-width: 576px) {
+					.left, .right {
+						min-height: calc(100vh / 4);
 					}
 				}
 
@@ -86,6 +90,12 @@
 					.code-subheading {
 						color: rgba(255, 255, 255, 0.7) !important;
 						margin: 0;
+					}
+
+					@media only screen and (max-width: 576px) {
+						p {
+							margin-bottom: 1rem !important;
+						}
 					}
 
 					.icon {
@@ -135,6 +145,12 @@
 				background-repeat: no-repeat;
 			}
 
+			@media only screen and (max-width: 576px) {
+				.github, .apps, .blog, .kofi {
+					display: none;
+				}
+			}
+
 			.overlay {
 				display: flex;
 				width: auto;
@@ -176,13 +192,6 @@
 	}
 }
 
-@media only screen and (max-width: 768px) {
-	.tech {
-		overflow: scroll;
-		overflow-x: hidden;
-	}
-}
-
 .tech::before {
 	background: linear-gradient(rgba(8, 8, 8, 0.7), rgb(0,0,0,0), rgb(0,0,0,0), rgb(0,0,0,0), rgb(0,0,0,0), rgb(0,0,0,0), rgb(0,0,0,0), rgb(0,0,0,0), rgb(0,0,0,0), rgb(0,0,0,0)),
 		linear-gradient(to top, rgba(8, 8, 8), rgb(0,0,0,0), rgb(0,0,0,0), rgb(0,0,0,0), rgb(0,0,0,0));
@@ -191,4 +200,15 @@
 	position: absolute;
 	width: 100%;
 	pointer-events: none;
+}
+
+@media only screen and (max-width: 768px) {
+	.tech {
+		overflow: scroll;
+		overflow-x: hidden;
+	}
+
+	.tech::before {
+		display: none;
+	}
 }

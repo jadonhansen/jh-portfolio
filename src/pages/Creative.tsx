@@ -44,25 +44,25 @@ export default function Creative(props: ComponentProps) {
 
 				<div className="col-12 col-md-6 col-content">
 					<div className="row row-cols-3">
-						<div className="col-12 col-md-4">
+						<div className="col-12 col-sm-6 col-md-4">
 							<div className="ig">
 								<p>Surfing, content creation and the more human side of me.</p>
 							</div>
 							<a className="icon" href="https://www.instagram.com/jadon.hansen" target="_blank" rel="noreferrer">
-								<img src={require("../assets/icons/instagram.png")} />
+								<img className="ig-icon" src={require("../assets/icons/instagram.png")} />
 								@jadon.hansen
 							</a>
 						</div>
-						<div className="col-12 col-md-4">
+						<div className="col-12 col-sm-6 col-md-4">
 							<div className="dev-ig">
 								<p>Follow my developer lifestyle and for updates on all of my projects.</p>
 							</div>
 							<a className="icon" href="https://www.instagram.com/developer.jadon" target="_blank" rel="noreferrer">
-								<img src={require("../assets/icons/instagram.png")} />
+								<img className="ig-icon" src={require("../assets/icons/instagram.png")} />
 								@developer.jadon
 							</a>
 						</div>
-						<div className="col-12 col-md-4">
+						<div className="col-12 col-sm-6 col-md-4">
 							<div className="youtube">
 								<p>Check out my YouTube channel featuring POV style surfing sessions.</p>
 							</div>
