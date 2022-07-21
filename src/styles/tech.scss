@@ -51,11 +51,18 @@
 				overflow: auto;
 				padding-bottom: 7rem;
 
+				.right {
+					border-right: 2px solid rgb(30, 30, 30);
+				}
+
+				.left {
+					border-left: 2px solid rgb(30, 30, 30);
+				}
+
 				.left, .right {
 					overflow: hidden;
 					padding: 0;
 					min-height: calc(100vh / 3);
-					border-left: 1.2px solid rgb(30, 30, 30);
 
 					.icon {
 						align-self: flex-start !important;
@@ -65,13 +72,13 @@
 				@media only screen and (max-width: 768px) {
 					.left, .right {
 						border: none;
-						margin-bottom: 2rem;
 					}
 				}
 
 				@media only screen and (max-width: 576px) {
 					.left, .right {
 						min-height: calc(100vh / 4);
+						margin-bottom: 2rem;
 					}
 				}
 
@@ -92,7 +99,7 @@
 						margin: 0;
 					}
 
-					@media only screen and (max-width: 576px) {
+					@media only screen and (max-width: 768px) {
 						p {
 							margin-bottom: 1rem !important;
 						}
@@ -127,7 +134,7 @@
 			}
 
 			.apps {
-				background: url("../assets/images/w-1.jpg");
+				background: url("../assets/images/apps-1.png");
 				background-size: cover;
 				background-repeat: no-repeat;
 			}
@@ -194,7 +201,7 @@
 
 .tech::before {
 	background: linear-gradient(rgba(8, 8, 8, 0.7), rgb(0,0,0,0), rgb(0,0,0,0), rgb(0,0,0,0), rgb(0,0,0,0), rgb(0,0,0,0), rgb(0,0,0,0), rgb(0,0,0,0), rgb(0,0,0,0), rgb(0,0,0,0)),
-		linear-gradient(to top, rgba(8, 8, 8), rgb(0,0,0,0), rgb(0,0,0,0), rgb(0,0,0,0), rgb(0,0,0,0));
+		linear-gradient(to top, rgba(8, 8, 8), rgb(0,0,0,0), rgb(0,0,0,0), rgb(0,0,0,0));
 	content: "\00a0";
 	height: 100%;
 	position: absolute;

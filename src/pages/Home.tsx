@@ -8,6 +8,7 @@ export default function Home(props: ComponentProps) {
 	const { current } = props;
 
 	const animation = useAnimation();
+	const fadeIn = useAnimation();
 
 	useEffect(() => {
 		if (current == "home") {
@@ -29,6 +30,15 @@ export default function Home(props: ComponentProps) {
 		}
 	}, [current]);
 
+	useEffect(() => {
+		fadeIn.start({
+			opacity: 1,
+			transition: {
+				duration: 1
+			}
+		});
+	}, []);
+
 	return (
 		<motion.div className="home" animate={animation}>
 			<div className="row">
@@ -42,7 +52,7 @@ export default function Home(props: ComponentProps) {
 					</div>
 				</div>
 
-				<div className="col col-content">
+				<motion.div animate={fadeIn} className="col col-content">
 					<div className="overlay">
 						<p>Developer</p>
 						<p>Creator</p>
@@ -50,7 +60,7 @@ export default function Home(props: ComponentProps) {
 						<p>Surfer</p>
 						<p>Human</p>
 					</div>
-				</div>
+				</motion.div>
 			</div>
 		</motion.div>
 	);
