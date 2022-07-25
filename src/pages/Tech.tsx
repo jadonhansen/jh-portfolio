@@ -67,7 +67,7 @@ export default function Tech(props: ComponentProps) {
 						<div className="col-12 col-sm-6 apps left">
 							<div className="overlay">
 								<button>
-									<a href="https://apps.jadonhansen.co.za/" target="_blank" rel="noreferrer">
+									<a href="https://apps.jadonhansen.com/" target="_blank" rel="noreferrer">
 										View apps
 									</a>
 								</button>
@@ -81,7 +81,7 @@ export default function Tech(props: ComponentProps) {
 									Building fluid and pleasing mobile applications has always been a goal of mine. See my apps portfolio to view all of the iOS and Android apps I have brought to life
 									with React Native.
 								</p>
-								<a href="https://apps.jadonhansen.co.za/" target="_blank" rel="noreferrer" className="icon">
+								<a href="https://apps.jadonhansen.com/" target="_blank" rel="noreferrer" className="icon">
 									<img src={require("../assets/icons/smartphone.png")} />
 								</a>
 							</div>
@@ -91,7 +91,7 @@ export default function Tech(props: ComponentProps) {
 							<div className="text-box">
 								<p className="subheading">Tutorial series</p>
 								<p>I have recently started a series of articles teaching the basics and intricacies of React Native as well as Expo. Check it out, you might learn something!</p>
-								<a href="https://dev.jadonhansen.co.za/" target="_blank" rel="noreferrer" className="icon">
+								<a href="https://dev.jadonhansen.com/" target="_blank" rel="noreferrer" className="icon">
 									<img className="edit-img" src={require("../assets/icons/blog.png")} />
 								</a>
 							</div>
@@ -100,7 +100,7 @@ export default function Tech(props: ComponentProps) {
 						<div className="col-12 col-sm-6 blog right">
 							<div className="overlay">
 								<button>
-									<a href="https://blog.jadonhansen.co.za/" target="_blank" rel="noreferrer">
+									<a href="https://dev.jadonhansen.com/" target="_blank" rel="noreferrer">
 										View articles
 									</a>
 								</button>
