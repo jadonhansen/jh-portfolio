@@ -56,7 +56,7 @@ export default function Home(props: ComponentProps) {
 					<div className="overlay">
 						<p>Developer</p>
 						<p>Creator</p>
-						<p>Enthuisiast</p>
+						<p>Enthusiast</p>
 						<p>Surfer</p>
 						<p>Human</p>
 					</div>
