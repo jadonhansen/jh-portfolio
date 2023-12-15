@@ -106,29 +106,6 @@ export default function Tech(props: ComponentProps) {
 								</button>
 							</div>
 						</div>
-
-						<div className="col-12 col-sm-6 kofi left">
-							<div className="overlay">
-								<button>
-									<a href="https://ko-fi.com/jadonhansen" target="_blank" rel="noreferrer">
-										Donate
-									</a>
-								</button>
-							</div>
-						</div>
-
-						<div className="col-12 col-sm-6 right">
-							<div className="text-box last-text-box">
-								<p className="subheading">Show your support</p>
-								<p>
-									Developers need sustenance too! Support me on Ko-Fi and donate or buy me a coffee so that I can keep producing high quality apps. Scan the QR code or tap the coffee
-									icon below.
-								</p>
-								<a href="https://ko-fi.com/jadonhansen" target="_blank" rel="noreferrer" className="icon">
-									<img src={require("../assets/icons/coffee.png")} />
-								</a>
-							</div>
-						</div>
 					</div>
 				</div>
 			</div>
