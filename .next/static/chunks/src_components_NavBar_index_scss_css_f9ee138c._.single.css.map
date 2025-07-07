@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/components/NavBar/index.scss.css"],"sourcesContent":[".nav-wrapper{width:100%;position:absolute;bottom:0;margin-bottom:3rem;display:flex;justify-content:center;z-index:100}.nav-wrapper nav{width:fit-content;text-align:center}.nav-wrapper nav a{margin:0 1rem;text-decoration:none;font-weight:400;letter-spacing:0}.nav-wrapper nav .active{color:#57e5ec !important}.nav-wrapper nav a:hover{cursor:pointer;color:#fff}.nav-wrapper nav a:hover.active{color:#57e5ec !important}.nav-wrapper nav .underline{position:relative;height:1px;width:2.5rem;margin:.625rem 1rem 0 1rem;background-color:#57e5ec;left:0}@media only screen and (max-width: 768px){.nav-wrapper{margin-bottom:0;padding:1rem 0;background-color:rgba(0,0,0,.9)}}"],"names":[],"mappings":"AAAA;;;;;;;;;;AAAsH;;;;;AAAqD;;;;;;;AAAuF;;;;AAAkD;;;;;AAAmD;;;;AAAyD;;;;;;;;;AAAiI;EAA0C"}}]
+}

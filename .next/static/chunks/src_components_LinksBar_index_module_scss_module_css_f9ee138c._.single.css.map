@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/components/LinksBar/index.module.scss.module.css"],"sourcesContent":[".links-bar{position:absolute;bottom:3rem;left:3rem;display:flex;z-index:100}.links-bar a:first-child{margin-right:.8rem}.links-bar a:hover{transform:scale(1.1)}@media only screen and (max-width: 768px){.links-bar{bottom:1.8rem;left:2rem}}@media only screen and (max-width: 415px){.links-bar{display:none}}"],"names":[],"mappings":"AAAA;;;;;;;;AAA4E;;;;AAA4C;;;;AAAwC;EAA0C;;;;;;AAAoC;EAA0C"}}]
+}

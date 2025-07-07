@@ -1,0 +1,142 @@
+.creative {
+	height: 100vh;
+	min-width: 100vw;
+
+	.row {
+		height: 100%;
+		min-width: 100vw;
+		padding: 0;
+		margin: 0;
+
+		.header-col {
+			display: flex;
+			justify-content: center;
+
+			.header-box {
+				padding-top: 14rem;
+
+				.subheading-box {
+					display: flex;
+					flex-direction: row;
+
+					.line {
+						border-top: 4px solid white;
+						width: 30px;
+						margin-right: 2rem;
+						align-self: center;
+					}
+				}
+			}
+
+			@media only screen and (max-width: 768px) {
+				.header-box {
+					padding: 2rem 2.5rem 0 2.5rem;
+					margin-bottom: 4rem;
+				}
+			}
+		}
+
+		@media only screen and (max-width: 768px) {
+			.header-col {
+				justify-content: start;
+			}
+		}
+
+		.col-content {
+			padding-right: 3rem;
+
+			.row {
+				min-width: 100%;
+
+				.col-12, .col-md-4 {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					height: 80%;
+				}
+
+				@media only screen and (max-width: 768px) {
+					.col-12 {
+						padding-bottom: 0;
+						margin-bottom: 5rem;
+						height: 50%
+					}
+				}
+
+				.icon {
+					display: flex;
+					text-decoration: none;
+					padding-top: 1rem;
+					align-items: flex-end;
+					color: rgba(255, 255, 255, 0.5) !important;
+					flex-wrap: wrap;
+
+					.img {
+						margin: auto 0.4rem auto 0;
+					}
+				}
+
+				.icon:hover {
+					.img {
+						transform: scale(1.1);
+						color: white !important;
+					}
+				}
+
+				.ig {
+					border-radius: 10px;
+					height: 65%;
+					display: flex;
+					align-items: flex-end;
+					padding: 1rem 1rem 0 1rem;
+					background: linear-gradient(to top, rgba(8, 8, 8,), rgb(8, 8, 8, 0.2)), url("../../assets/images/ig.jpg");
+					background-size: cover;
+					background-repeat: no-repeat;
+				}
+
+				.dev-ig {
+					border-radius: 10px;
+					height: 65%;
+					display: flex;
+					align-items: flex-end;
+					padding: 1rem 1rem 0 1rem;
+					background: linear-gradient(to top, rgba(8, 8, 8), rgb(8, 8, 8, 0.2)), url("../../assets/images/dev_ig.jpg");
+					background-size: cover;
+					background-repeat: no-repeat;
+				}
+
+				.youtube {
+					border-radius: 10px;
+					height: 65%;
+					display: flex;
+					align-items: flex-end;
+					padding: 1rem 1rem 0 1rem;
+					background: linear-gradient(to top, rgba(8, 8, 8), rgb(8, 8, 8, 0.2)), url("../../assets/images/rs_1.jpg");
+					background-size: cover;
+					background-repeat: no-repeat;
+				}
+
+				@media only screen and (max-width: 768px) {
+					.ig, .dev-ig, .youtube {
+						min-height: 100%;
+					}
+				}
+			}
+
+		}
+
+		@media only screen and (max-width: 768px) {
+			.col-content {
+				padding: 0 3rem;
+				padding-bottom: 40rem !important;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.creative {
+		overflow: scroll;
+		overflow-x: hidden;
+	}
+}
