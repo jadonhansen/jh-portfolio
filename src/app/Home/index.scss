@@ -32,8 +32,8 @@
 
 			@media only screen and (max-width: 768px) {
 				.header-box {
-					padding: 2rem 2.5rem 0 2.5rem;
-					margin-bottom: 2rem;
+					padding: 2rem 2rem 0 2rem;
+					margin-bottom: 1rem;
 				}
 			}
 		}
@@ -49,6 +49,7 @@
 			background-image: url("../../assets/images/jadon.jpg");
 			background-size: cover;
 			background-repeat: no-repeat;
+			background-position: top;
 			padding: 0;
 			margin: 0;
 
@@ -85,5 +86,6 @@
 	.home {
 		overflow: scroll;
 		overflow-x: hidden;
+		height: calc(100vh - 68px);
 	}
 }

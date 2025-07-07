@@ -37,7 +37,7 @@ export default function Creative(props: ComponentProps) {
 	return (
 		<motion.div className="creative" animate={animation}>
 			<div className="row">
-				<div className="col-12 col-md-6 header-col">
+				<div className="col-12 col-lg-6 col-md-3 header-col">
 					<div className="header-box">
 						<h1>Creative.</h1>
 						<div className="subheading-box">
@@ -47,9 +47,9 @@ export default function Creative(props: ComponentProps) {
 					</div>
 				</div>
 
-				<div className="col-12 col-md-6 col-content">
+				<div className="col-12 col-lg-6 col-md-9 col-content">
 					<div className="row row-cols-3">
-						<div className="col-12 col-sm-6 col-md-4">
+						<div className="col-12 col-md-4">
 							<div className="ig">
 								<p>Surfing, content creation and the more human side of me.</p>
 							</div>
@@ -62,8 +62,8 @@ export default function Creative(props: ComponentProps) {
 								@jadon.hansen
 							</a>
 						</div>
-						<div className="col-12 col-sm-6 col-md-4">
-							<div className="dev-ig">
+						<div className="col-12 col-md-4">
+							<div className="car-ig">
 								<p>Follow my passion for cars.</p>
 							</div>
 							<a className="icon" href="https://www.instagram.com/_i30njoy_/" target="_blank" rel="noreferrer">
@@ -75,7 +75,7 @@ export default function Creative(props: ComponentProps) {
 								@_i30njoy_
 							</a>
 						</div>
-						<div className="col-12 col-sm-6 col-md-4">
+						<div className="col-12 col-md-4">
 							<div className="youtube">
 								<p>Check out my YouTube channel featuring POV style surfing sessions.</p>
 							</div>

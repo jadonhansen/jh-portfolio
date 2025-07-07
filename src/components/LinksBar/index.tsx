@@ -7,6 +7,7 @@ import "./index.scss";
 
 
 export default function LinksBar() {
+
 	return (
 		<div className={"links-bar"}>
 			<a href="https://twitter.com/JadonHansen" target="_blank" rel="noreferrer">

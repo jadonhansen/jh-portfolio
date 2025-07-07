@@ -1,6 +1,5 @@
 "use client";
 
-import type { Metadata } from "next";
 import Navbar from "@/components/NavBar";
 import LinksBar from "@/components/LinksBar";
 import Navigation from "@/components/Navigation";
@@ -8,13 +7,8 @@ import { useState } from "react";
 import { ComponentProps } from "@/types/interfaces";
 
 import "./globals.scss";
-import "./app.scss";
 import Head from "./head";
 
-// export const metadata: Metadata = {
-//   title: "Jadon Hansen",
-//   description: "Jadon Hansen's portfolio website",
-// };
 
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
 

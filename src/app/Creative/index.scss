@@ -30,8 +30,8 @@
 
 			@media only screen and (max-width: 768px) {
 				.header-box {
-					padding: 2rem 2.5rem 0 2.5rem;
-					margin-bottom: 4rem;
+					padding: 2rem 2rem 0 2rem;
+					margin-bottom: 2rem;
 				}
 			}
 		}
@@ -58,8 +58,8 @@
 				@media only screen and (max-width: 768px) {
 					.col-12 {
 						padding-bottom: 0;
-						margin-bottom: 5rem;
-						height: 50%
+						margin-bottom: 2rem;
+						height: 400px;
 					}
 				}
 
@@ -77,6 +77,8 @@
 				}
 
 				.icon:hover {
+					color: white !important;
+
 					.img {
 						transform: scale(1.1);
 						color: white !important;
@@ -94,15 +96,16 @@
 					background-repeat: no-repeat;
 				}
 
-				.dev-ig {
+				.car-ig {
 					border-radius: 10px;
 					height: 65%;
 					display: flex;
 					align-items: flex-end;
 					padding: 1rem 1rem 0 1rem;
-					background: linear-gradient(to top, rgba(8, 8, 8), rgb(8, 8, 8, 0.2)), url("../../assets/images/dev_ig.jpg");
+					background: linear-gradient(to top, rgba(8, 8, 8), rgb(8, 8, 8, 0.2)), url("../../assets/images/i30n.jpg");
 					background-size: cover;
 					background-repeat: no-repeat;
+					background-position: top;
 				}
 
 				.youtube {
@@ -114,11 +117,12 @@
 					background: linear-gradient(to top, rgba(8, 8, 8), rgb(8, 8, 8, 0.2)), url("../../assets/images/rs_1.jpg");
 					background-size: cover;
 					background-repeat: no-repeat;
+					background-position: top;
 				}
 
 				@media only screen and (max-width: 768px) {
-					.ig, .dev-ig, .youtube {
-						min-height: 100%;
+					.ig, .car-ig, .youtube {
+						height: 100%;
 					}
 				}
 			}
@@ -127,8 +131,8 @@
 
 		@media only screen and (max-width: 768px) {
 			.col-content {
-				padding: 0 3rem;
-				padding-bottom: 40rem !important;
+				padding: 0 1rem;
+				padding-bottom: 6rem !important;
 			}
 		}
 	}

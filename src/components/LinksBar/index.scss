@@ -26,6 +26,12 @@
 
 @media only screen and (max-width: 415px) {
 	.links-bar {
-		display: none;
+		left: 50%;
+    	transform: translate(-50%, 0);
+		bottom: 80px;
+
+		.img {
+			color: white !important;
+		}
 	}
 }
