@@ -4,7 +4,6 @@ import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 
 import { ComponentProps } from "../../types/interfaces";
-import "../globals.scss";
 import "./index.scss";
 
 

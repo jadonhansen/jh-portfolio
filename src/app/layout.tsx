@@ -1,24 +1,7 @@
-"use client";
-
-import Navbar from "@/components/NavBar";
-import LinksBar from "@/components/LinksBar";
-import Navigation from "@/components/Navigation";
-import { useState } from "react";
-import { ComponentProps } from "@/types/interfaces";
-
 import "./globals.scss";
-import Head from "./head";
 
 
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
-
-	const [pages, setPages] = useState({ current: "home", previous: "home" } as ComponentProps);
-
-	const changePage = (page: string) => {
-		const prev = pages.previous;
-
-		setPages({ current: page, previous: prev });
-	};
 
 	return (
 		<html lang="en">
@@ -31,17 +14,7 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
 				/>
 			</head>
 			<body>
-				<div className="appContainer">
-					<Head />
-
-					<Navbar
-						current={pages.current}
-						previous={pages.previous}
-						changePage={changePage}
-					/>
-					<LinksBar />
-					<Navigation current={pages.current} previous={pages.previous} />
-				</div>
+				{children}
 
 				<script
 					src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"

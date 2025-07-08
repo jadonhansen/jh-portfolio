@@ -1,9 +1,9 @@
 import React from "react";
 
 import { ComponentProps } from "../../types/interfaces";
-import Creative from "../../app/Creative";
-import Home from "../../app/Home";
-import Tech from "../../app/Tech";
+import Creative from "../Creative";
+import Home from "../Home";
+import Tech from "../Tech";
 
 export default function Navigation(props: ComponentProps) {
 
