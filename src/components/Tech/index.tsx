@@ -4,7 +4,7 @@ import React, {useEffect} from "react";
 import { motion, useAnimation } from "framer-motion";
 import { FiGithub } from "react-icons/fi";
 import { CiMobile3 } from "react-icons/ci";
-import { CiEdit } from "react-icons/ci";
+import { FaLinkedin } from "react-icons/fa";
 
 import { ComponentProps } from "../../types/interfaces";
 import "./index.scss";
@@ -53,12 +53,15 @@ export default function Tech(props: ComponentProps) {
 						<div className="col-12 col-sm-6 left">
 							<div className="text-box">
 								<p className="code-subheading">The code</p>
-								<p>GitHub. The well known place where all developers worth their salt store some next generation super secret code...shh.</p>
+								<div>
+									<p>GitHub. The well known place where all developers worth their salt store some next generation super secret code...shh.</p>
+									<p>Check out my public work by visiting my GitHub.</p>
+								</div>
 								<a href="https://github.com/jadonhansen" target="_blank" rel="noreferrer" className="icon">
 									<FiGithub
 										className="img"
-										color="grey"
-										size={22}
+										color="rgb(255, 255, 255)"
+										size={21}
 									/>
 								</a>
 							</div>
@@ -88,14 +91,14 @@ export default function Tech(props: ComponentProps) {
 							<div className="text-box">
 								<p className="subheading">Mobile apps</p>
 								<p>
-									Building fluid and pleasing mobile applications has always been a goal of mine. See my apps portfolio to view all of the iOS and Android apps I have brought to life
+									Building fluid and pleasing mobile applications has always been a passion of mine. See my apps portfolio to view all of the iOS and Android apps I have brought to life
 									with React Native and Expo.
 								</p>
 								<a href="https://apps.jadonhansen.com/" target="_blank" rel="noreferrer" className="icon">
 									<CiMobile3
 										className="img"
-										color="grey"
-										size={22}
+										color="rgb(255, 255, 255)"
+										size={23}
 									/>
 								</a>
 							</div>
@@ -103,13 +106,13 @@ export default function Tech(props: ComponentProps) {
 
 						<div className="col-12 col-sm-6 left">
 							<div className="text-box">
-								<p className="subheading">Tutorial series</p>
-								<p>I have recently started a series of articles teaching the basics and intricacies of React Native as well as Expo. Check it out, you might learn something!</p>
-								<a href="https://dev.jadonhansen.com/" target="_blank" rel="noreferrer" className="icon">
-									<CiEdit
+								<p className="subheading">Experience</p>
+								<p>Visit my LinkedIn profile to learn more about my proffessional work experience and journey.</p>
+								<a href="https://www.linkedin.com/in/jadonhansen/" target="_blank" rel="noreferrer" className="icon">
+									<FaLinkedin
 										className="img"
-										color="grey"
-										size={23}
+										color="rgb(255, 255, 255)"
+										size={22}
 									/>
 								</a>
 							</div>
@@ -118,8 +121,8 @@ export default function Tech(props: ComponentProps) {
 						<div className="col-12 col-sm-6 blog right">
 							<div className="overlay">
 								<button>
-									<a href="https://dev.jadonhansen.com/" target="_blank" rel="noreferrer">
-										View articles
+									<a href="https://www.linkedin.com/in/jadonhansen/" target="_blank" rel="noreferrer">
+										View Experience
 									</a>
 								</button>
 							</div>
