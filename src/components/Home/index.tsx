@@ -1,70 +1,46 @@
 "use client";
 
-import React, { useEffect } from "react";
-import { motion, useAnimation } from "framer-motion";
-
+import { motion } from "framer-motion";
 import { ComponentProps } from "../../types/interfaces";
 import "./index.scss";
 
 
-export default function Home(props: ComponentProps) {
-	const { current } = props;
+const TRANSITION = { duration: 1.2, ease: [0.76, 0, 0.24, 1] as const };
 
-	const animation = useAnimation();
-	const fadeIn = useAnimation();
 
-	useEffect(() => {
-		if (current == "home") {
-			animation.start({
-				x: 0,
-				transition: {
-					duration: 1.2,
-					ease: [0.76, 0, 0.24, 1],
-				},
-			});
-		} else {
-			animation.start({
-				x: "-100vw",
-				transition: {
-					duration: 1.2,
-					ease: [0.76, 0, 0.24, 1],
-				}
-			});
-		}
-	}, [current, animation]);
+export default function Home({ current }: ComponentProps) {
+    return (
+        <motion.div
+            className="home"
+            animate={{ x: current === "home" ? 0 : "-100vw" }}
+            transition={TRANSITION}
+        >
+            <div className="row">
+                <div className="col-xs-12 col-md-7 header-col">
+                    <div className="header-box">
+                        <h1>This is me.</h1>
+                        <div className="subheading-box">
+                            <p className="line"></p>
+                            <p>Jadon Hansen</p>
+                        </div>
+                    </div>
+                </div>
 
-	useEffect(() => {
-		fadeIn.start({
-			opacity: 1,
-			transition: {
-				duration: 1
-			}
-		});
-	}, [fadeIn]);
-
-	return (
-		<motion.div className="home" animate={animation}>
-			<div className="row">
-				<div className="col-xs-12 col-md-7 header-col">
-					<div className="header-box">
-						<h1>This is me.</h1>
-						<div className="subheading-box">
-							<p className="line"></p>
-							<p>Jadon Hansen</p>
-						</div>
-					</div>
-				</div>
-
-				<motion.div animate={fadeIn} className="col col-content">
-					<div className="overlay">
-						<p>Developer</p>
-						<p>Creator</p>
-						<p>Enthusiast</p>
-						<p>Surfer</p>
-						<p>Human</p>
-					</div>
-				</motion.div>
-			</div>
-		</motion.div>
-	);
+                <motion.div
+                    className="col col-content"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1 }}
+                >
+                    <div className="overlay">
+                        <p>Developer</p>
+                        <p>Creator</p>
+                        <p>Enthusiast</p>
+                        <p>Surfer</p>
+                        <p>Human</p>
+                    </div>
+                </motion.div>
+            </div>
+        </motion.div>
+    );
 }

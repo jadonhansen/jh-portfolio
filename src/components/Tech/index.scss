@@ -55,7 +55,7 @@
 				min-width: 100%;
 				height: 100vh;
 				overflow: auto;
-				padding-bottom: 7rem;
+				padding-bottom: 10rem;
 
 				.right {
 					border-right: 2px solid rgb(30, 30, 30);
@@ -66,9 +66,8 @@
 				}
 
 				.left, .right {
-					overflow: hidden;
 					padding: 0;
-					min-height: calc(100vh / 3);
+					min-height: calc(100vh / 4);
 
 					.icon {
 						align-self: flex-start !important;
@@ -90,9 +89,6 @@
 
 				.text-box {
 					height: 100%;
-					display: flex;
-					flex-direction: column;
-					justify-content: space-between;
 					padding: 1rem;
 
 					.subheading {
@@ -152,8 +148,14 @@
 				background-repeat: no-repeat;
 			}
 
+			.owners-circle {
+				background: url("../../assets/images/oc.jpg");
+				background-size: cover;
+				background-repeat: no-repeat;
+			}
+
 			@media only screen and (max-width: 576px) {
-				.github, .apps, .blog {
+				.github, .apps, .blog, .owners-circle {
 					display: none;
 				}
 			}
@@ -164,10 +166,7 @@
 				height: 100%;
 				background-color: rgba(8, 8, 8, 0.7);
 				opacity: 0;
-				-webkit-transition: opacity ease .5s;
-				-moz-transition: .5s ease;
-				-o-transition: .5s ease;
-				transition: .5s ease;
+				transition: opacity 0.5s ease;
 
 				button {
 					align-self: center;
@@ -176,15 +175,24 @@
 					background-color: transparent;
 					border: 1px solid white;
 					border-radius: 10px;
+					transition: border-color 0.3s ease;
 
 					a {
 						color: white;
 						text-decoration: none;
 					}
+
+					&:hover {
+						border-color: rgb(87, 229, 236);
+
+						a {
+							color: rgb(87, 229, 236) !important;
+						}
+					}
 				}
 			}
 
-			.github:hover, .apps:hover, .blog:hover {
+			.github:hover, .apps:hover, .blog:hover, .owners-circle:hover {
 				.overlay {
 					opacity: 1;
 				}
@@ -199,23 +207,9 @@
 	}
 }
 
-.tech::before {
-	background: linear-gradient(rgba(8, 8, 8, 0.7), rgb(0,0,0,0), rgb(0,0,0,0), rgb(0,0,0,0), rgb(0,0,0,0), rgb(0,0,0,0), rgb(0,0,0,0), rgb(0,0,0,0), rgb(0,0,0,0), rgb(0,0,0,0)),
-		linear-gradient(to top, rgba(8, 8, 8), rgb(0,0,0,0), rgb(0,0,0,0), rgb(0,0,0,0));
-	content: "\00a0";
-	height: 100%;
-	position: absolute;
-	width: 100%;
-	pointer-events: none;
-}
-
 @media only screen and (max-width: 768px) {
 	.tech {
 		overflow: scroll;
 		overflow-x: hidden;
-	}
-
-	.tech::before {
-		display: none;
 	}
 }

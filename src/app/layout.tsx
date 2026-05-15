@@ -1,28 +1,26 @@
+import type { Metadata } from "next";
+import "bootstrap/dist/css/bootstrap-grid.min.css";
 import "./globals.scss";
 
 
-export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
+export const metadata: Metadata = {
+    title: "Jadon Hansen",
+    description: "Jadon Hansen's portfolio — Developer, Creator, Enthusiast",
+    icons: {
+        icon: [
+            { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+            { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+        ],
+        apple: "/apple-touch-icon.png",
+    },
+    manifest: "/manifest.json",
+};
 
-	return (
-		<html lang="en">
-			<head>
-				<link
-					href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
-					rel="stylesheet"
-					integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
-					crossOrigin="anonymous"
-				/>
-			</head>
-			<body>
-				{children}
 
-				<script
-					src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
-					integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
-					crossOrigin="anonymous"
-					async
-				/>
-			</body>
-		</html>
-	);
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+    return (
+        <html lang="en">
+            <body>{children}</body>
+        </html>
+    );
 }

@@ -1,146 +1,177 @@
 .creative {
 	height: 100vh;
 	min-width: 100vw;
+	position: relative;
+	overflow: hidden;
 
-	.row {
+	// ── Background photo layers ──────────────────────────────────
+	.creative-bg {
+		position: absolute;
+		inset: 0;
+		opacity: 0;
+		transition: opacity 0.65s cubic-bezier(0.76, 0, 0.24, 1);
+		background-size: cover;
+		background-position: center;
+		z-index: 0;
+
+		&::after {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background: rgba(8, 8, 8, 0.74);
+		}
+
+		&.visible { opacity: 1; }
+	}
+
+	.bg-jadon  { background: url("../../assets/images/ig.jpg") center / cover; }
+	.bg-car    { background: url("../../assets/images/i30n.jpg") top / cover; }
+	.bg-surf   { background: url("../../assets/images/rs_1.jpg") top / cover; }
+
+	.bg-prelude-ig {
+		background: url("../../assets/images/prelude.jpg") top / cover;
+	}
+
+	.bg-prelude-yt {
+		background: url("../../assets/images/prelude.jpg") top / cover;
+	}
+
+	// ── Main content ─────────────────────────────────────────────
+	.creative-inner {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		flex-direction: column;
 		height: 100%;
-		min-width: 100vw;
-		padding: 0;
-		margin: 0;
+		padding: 0 4rem 6rem;
 
-		.header-col {
-			display: flex;
-			justify-content: center;
+		.creative-header {
+			// padding-top: 3.5rem;
+			margin-bottom: 2.5rem;
 
-			.header-box {
-				padding-top: 14rem;
+			.subheading-box {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
 
-				.subheading-box {
-					display: flex;
-					flex-direction: row;
-
-					.line {
-						border-top: 4px solid white;
-						width: 30px;
-						margin-right: 2rem;
-						align-self: center;
-					}
+				.line {
+					border-top: 4px solid white;
+					width: 30px;
+					margin-right: 2rem;
+					margin-bottom: 0;
 				}
-			}
-
-			@media only screen and (max-width: 768px) {
-				.header-box {
-					padding: 2rem 2rem 0 2rem;
-					margin-bottom: 2rem;
-				}
-			}
-		}
-
-		@media only screen and (max-width: 768px) {
-			.header-col {
-				justify-content: start;
-			}
-		}
-
-		.col-content {
-			padding-right: 3rem;
-
-			.row {
-				min-width: 100%;
-
-				.col-12, .col-md-4 {
-					display: flex;
-					flex-direction: column;
-					justify-content: center;
-					height: 80%;
-				}
-
-				@media only screen and (max-width: 768px) {
-					.col-12 {
-						padding-bottom: 0;
-						margin-bottom: 2rem;
-						height: 400px;
-					}
-				}
-
-				.icon {
-					display: flex;
-					text-decoration: none;
-					padding-top: 1rem;
-					align-items: flex-end;
-					color: rgba(255, 255, 255, 0.5) !important;
-					flex-wrap: wrap;
-
-					.img {
-						margin: auto 0.4rem auto 0;
-					}
-				}
-
-				.icon:hover {
-					color: white !important;
-
-					.img {
-						transform: scale(1.1);
-						color: white !important;
-					}
-				}
-
-				.ig {
-					border-radius: 10px;
-					height: 65%;
-					display: flex;
-					align-items: flex-end;
-					padding: 1rem 1rem 0 1rem;
-					background: linear-gradient(to top, rgba(8, 8, 8,), rgb(8, 8, 8, 0.2)), url("../../assets/images/ig.jpg");
-					background-size: cover;
-					background-repeat: no-repeat;
-				}
-
-				.car-ig {
-					border-radius: 10px;
-					height: 65%;
-					display: flex;
-					align-items: flex-end;
-					padding: 1rem 1rem 0 1rem;
-					background: linear-gradient(to top, rgba(8, 8, 8), rgb(8, 8, 8, 0.2)), url("../../assets/images/i30n.jpg");
-					background-size: cover;
-					background-repeat: no-repeat;
-					background-position: top;
-				}
-
-				.youtube {
-					border-radius: 10px;
-					height: 65%;
-					display: flex;
-					align-items: flex-end;
-					padding: 1rem 1rem 0 1rem;
-					background: linear-gradient(to top, rgba(8, 8, 8), rgb(8, 8, 8, 0.2)), url("../../assets/images/rs_1.jpg");
-					background-size: cover;
-					background-repeat: no-repeat;
-					background-position: top;
-				}
-
-				@media only screen and (max-width: 768px) {
-					.ig, .car-ig, .youtube {
-						height: 100%;
-					}
-				}
-			}
-
-		}
-
-		@media only screen and (max-width: 768px) {
-			.col-content {
-				padding: 0 1rem;
-				padding-bottom: 6rem !important;
 			}
 		}
 	}
-}
 
-@media only screen and (max-width: 768px) {
-	.creative {
-		overflow: scroll;
-		overflow-x: hidden;
+	// ── Channel list ─────────────────────────────────────────────
+	.channel-list {
+		flex: 1;
+		overflow-y: auto;
+		padding-bottom: 4rem;
+	}
+
+	.channel-row {
+		display: flex;
+		align-items: center;
+		padding: 1.15rem 0;
+		border-top: 1px solid rgba(255, 255, 255, 0.1);
+		text-decoration: none;
+		cursor: pointer;
+		transition: border-color 0.3s ease, padding-left 0.35s ease;
+		gap: 0;
+
+		&:last-child {
+			border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+		}
+
+		&.active {
+			border-color: rgba(255, 255, 255, 0.22);
+			padding-left: 0.4rem;
+
+			.num           { color: rgb(87, 229, 236); }
+			.handle        { color: white; }
+			.platform-badge { color: rgba(255, 255, 255, 0.55); }
+
+			.arrow {
+				opacity: 1;
+				transform: translate(0, 0);
+				color: rgb(87, 229, 236);
+			}
+		}
+
+		.num {
+			display: flex;
+			align-items: center;
+			color: rgba(255, 255, 255, 0.22);
+			width: 2.8rem;
+			flex-shrink: 0;
+			transition: color 0.3s ease;
+		}
+
+		.handle {
+			font-size: 1.05rem;
+			font-weight: 500;
+			color: rgba(255, 255, 255, 0.7);
+			flex: 1;
+			min-width: 0;
+			transition: color 0.3s ease;
+			letter-spacing: 0.02em;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+		.desc {
+			font-size: 0.78rem;
+			color: rgba(255, 255, 255, 0.3);
+			flex: 1.8;
+			padding: 0 2rem;
+			letter-spacing: 0.03em;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+		.platform-badge {
+			display: flex;
+			align-items: center;
+			gap: 0.35rem;
+			font-size: 0.65rem;
+			color: rgba(255, 255, 255, 0.22);
+			letter-spacing: 0.08em;
+			text-transform: uppercase;
+			flex-shrink: 0;
+			width: 6.5rem;
+			transition: color 0.3s ease;
+		}
+
+		.arrow {
+			flex-shrink: 0;
+			opacity: 0;
+			transform: translate(-0.4rem, 0.4rem);
+			transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease;
+			color: rgba(255, 255, 255, 0.4);
+		}
+	}
+
+	// ── Mobile ───────────────────────────────────────────────────
+	@media only screen and (max-width: 768px) {
+		overflow-y: auto;
+
+		.creative-inner {
+			padding: 0 1.5rem 5rem;
+
+			.creative-header {
+				padding-top: 2rem;
+				margin-bottom: 1.5rem;
+			}
+		}
+
+		.channel-row {
+			.desc { display: none; }
+
+			.platform-badge { width: 5rem; }
+		}
 	}
 }
