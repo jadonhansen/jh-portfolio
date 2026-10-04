@@ -1,0 +1,57 @@
+@use "../../styles/breakpoints" as *;
+
+.pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    min-height: var(--tap-min);
+    padding: var(--space-2) var(--space-5);
+    border: 1px solid var(--color-primary);
+    border-radius: var(--radius-pill);
+    font-weight: var(--weight-medium);
+    white-space: nowrap;
+    text-decoration: none;
+    transition:
+        background-color var(--duration-base) var(--ease-out),
+        color var(--duration-base) var(--ease-out),
+        transform var(--duration-fast) var(--ease-out);
+
+    &:active {
+        transform: translateY(1px);
+    }
+
+    @include up($bp-sm) {
+        padding-inline: var(--space-6);
+    }
+}
+
+.pill--primary {
+    background: var(--color-primary);
+    color: var(--color-on-primary);
+}
+
+.pill--secondary {
+    background: transparent;
+    color: var(--color-primary);
+}
+
+.pill__icon {
+    transition: transform var(--duration-base) var(--ease-out);
+}
+
+@media (hover: hover) {
+    .pill--primary:hover {
+        background: var(--color-accent);
+        border-color: var(--color-accent);
+    }
+
+    .pill--secondary:hover {
+        background: var(--color-primary);
+        color: var(--color-on-primary);
+    }
+
+    .pill:hover .pill__icon {
+        transform: translate(2px, -2px);
+    }
+}

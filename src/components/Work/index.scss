@@ -1,0 +1,221 @@
+@use "../../styles/breakpoints" as *;
+
+.work__list {
+    display: grid;
+    gap: calc(var(--space-8) + var(--space-4));
+}
+
+.project {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-6);
+
+    @include up($bp-lg) {
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        align-items: center;
+        gap: var(--space-6);
+    }
+}
+
+.project__visual {
+    width: 100%;
+    max-width: 28rem;
+
+    @include up($bp-lg) {
+        grid-row: 1;
+        grid-column: 2 / span 5;
+        justify-self: center;
+    }
+}
+
+.project__media {
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    max-height: 60vh;
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+// Base screenshot with a detail strip overlapping its lower-right edge.
+// The bottom padding is about half the overlay's height, so the overlay hangs over the base by half.
+.layered {
+    position: relative;
+    padding-bottom: 10.5%;
+}
+
+.layered__base,
+.layered__overlay {
+    display: block;
+    height: auto;
+    background: var(--color-surface);
+}
+
+.layered__base {
+    width: 92%;
+    border-radius: var(--radius-md);
+}
+
+.layered__overlay {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 80%;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-raised);
+}
+
+// Horizontal row of app screens. The next screen peeks in as the scroll hint.
+.screens {
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-line-strong) transparent;
+    padding-bottom: var(--space-3);
+    border-radius: var(--radius-lg);
+
+    &:focus-visible {
+        outline: var(--focus-ring);
+        outline-offset: var(--focus-offset);
+    }
+}
+
+.screens__track {
+    display: flex;
+    gap: var(--space-3);
+    width: max-content;
+}
+
+.screens__item {
+    flex: 0 0 auto;
+    width: min(9.5rem, 36vw);
+    scroll-snap-align: start;
+
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: var(--radius-lg);
+        background: var(--color-surface);
+    }
+}
+
+.project__media--cover img {
+    object-fit: cover;
+}
+
+.project__media--contain {
+    display: grid;
+    place-items: center;
+    padding: var(--space-6);
+    background:
+        radial-gradient(circle at 50% 40%, var(--color-surface-raised), transparent 70%),
+        var(--color-surface);
+
+    img {
+        object-fit: contain;
+    }
+}
+
+.project__body {
+    display: grid;
+    gap: var(--space-5);
+    justify-items: start;
+
+    @include up($bp-lg) {
+        grid-row: 1;
+        grid-column: 7 / span 5;
+    }
+}
+
+// Every second project mirrors the layout: text left, image right.
+.project:nth-child(even) {
+    @include up($bp-lg) {
+        .project__visual {
+            grid-column: 7 / span 5;
+        }
+
+        .project__body {
+            grid-column: 2 / span 5;
+        }
+    }
+}
+
+.project__title {
+    font-size: var(--text-xl);
+    font-weight: var(--weight-bold);
+    letter-spacing: var(--tracking-snug);
+}
+
+.project__description {
+    max-width: var(--prose-max);
+    color: var(--color-text-muted);
+}
+
+.project__apps {
+    display: grid;
+    width: 100%;
+    border-top: 1px solid var(--color-line);
+}
+
+.app {
+    display: grid;
+    gap: var(--space-2);
+    padding-block: var(--space-3);
+    border-bottom: 1px solid var(--color-line);
+
+    @include up($bp-sm) {
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: center;
+        gap: var(--space-4);
+    }
+}
+
+.app__text {
+    display: grid;
+}
+
+.app__name {
+    font-weight: var(--weight-medium);
+}
+
+.app__blurb {
+    color: var(--color-text-subtle);
+    font-size: var(--text-sm);
+}
+
+.app__stores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-1) var(--space-4);
+}
+
+.app__store {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    min-height: var(--tap-min);
+    color: var(--color-text-muted);
+    font-size: var(--text-sm);
+    text-decoration: none;
+    transition: color var(--duration-fast) var(--ease-out);
+
+    &:hover {
+        color: var(--color-text);
+    }
+
+    &:active {
+        color: var(--color-accent);
+    }
+}
+
+.project__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    margin-top: var(--space-2);
+}

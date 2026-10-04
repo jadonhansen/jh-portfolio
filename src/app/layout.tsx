@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-import "bootstrap/dist/css/bootstrap-grid.min.css";
 import "./globals.scss";
 
 
 export const metadata: Metadata = {
     title: "Jadon Hansen",
-    description: "Jadon Hansen's portfolio — Developer, Creator, Enthusiast",
+    description: "Jadon Hansen, senior frontend engineer building web and mobile products with React, Next.js and React Native. Also: cars and surf.",
     icons: {
         icon: [
             { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },

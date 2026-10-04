@@ -1,0 +1,127 @@
+@use "../../styles/breakpoints" as *;
+
+.off-clock__list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-3);
+    max-width: 36rem;
+    margin-inline: auto;
+
+    @include up($bp-lg) {
+        gap: var(--space-5);
+    }
+}
+
+.card__inner {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 3 / 5;
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+}
+
+.card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card__caption {
+    position: absolute;
+    inset: auto 0 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: var(--space-2);
+    padding: var(--space-8) var(--space-3) var(--space-3);
+    background: linear-gradient(to top, var(--color-scrim) 45%, transparent);
+
+    @include up($bp-md) {
+        padding: var(--space-9) var(--space-4) var(--space-4);
+    }
+}
+
+.card__text {
+    display: grid;
+    min-width: 0;
+}
+
+.card__link {
+    overflow-wrap: break-word;
+    font-size: var(--text-sm);
+    font-weight: var(--weight-bold);
+    line-height: var(--leading-snug);
+    text-decoration: none;
+
+    // Stretch the hit area over the whole card.
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: var(--radius-lg);
+    }
+
+    &:focus-visible {
+        outline: none;
+
+        &::after {
+            outline: var(--focus-ring);
+            outline-offset: calc(var(--focus-offset) * -1);
+        }
+    }
+
+    @include up($bp-md) {
+        font-size: var(--text-base);
+    }
+}
+
+.card__platform {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+    color: var(--color-text);
+    font-size: var(--text-sm);
+}
+
+.card__note {
+    margin-top: var(--space-1);
+    color: var(--color-text);
+    font-size: var(--text-sm);
+    line-height: var(--leading-snug);
+}
+
+.card__arrow {
+    // Narrow two-up cards need the caption's full width, so the arrow moves above the text.
+    position: absolute;
+    top: var(--space-3);
+    right: var(--space-3);
+    display: grid;
+    flex-shrink: 0;
+    place-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: var(--radius-pill);
+    background: var(--color-primary);
+    color: var(--color-on-primary);
+    transition: transform var(--duration-base) var(--ease-out);
+
+    @include up($bp-md) {
+        position: static;
+    }
+}
+
+.card__inner:active .card__arrow {
+    background: var(--color-accent);
+}
+
+@media (hover: hover) {
+    .card__inner:hover .card__arrow {
+        transform: translate(2px, -2px);
+    }
+
+    .card__inner:hover .card__link {
+        text-decoration: underline;
+        text-decoration-color: var(--color-accent);
+        text-underline-offset: 0.2em;
+    }
+}
