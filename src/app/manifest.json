@@ -1,6 +1,6 @@
 {
 	"short_name": "Jadon Hansen",
-	"name": "Jadon Hansen's website portfolio.",
+	"name": "Jadon Hansen",
 	"icons": [
 		{
 			"src": "favicon.ico",
@@ -20,6 +20,6 @@
 	],
 	"start_url": ".",
 	"display": "standalone",
-	"theme_color": "#000000",
-	"background_color": "#ffffff"
+	"theme_color": "#141414",
+	"background_color": "#141414"
 }

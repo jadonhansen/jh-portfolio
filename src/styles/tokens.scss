@@ -1,0 +1,90 @@
+// Design tokens. The site is dark-only, so there is one theme.
+:root {
+    color-scheme: dark;
+
+    // Color
+    --color-bg: #141414;
+    --color-surface: #1c1c1c;
+    --color-surface-raised: #242424;
+    --color-text: #f2f0ec;
+    --color-text-muted: #a3a09a;
+    --color-text-subtle: #8a8780;
+    --color-line: rgba(242, 240, 236, 0.12);
+    --color-line-strong: rgba(242, 240, 236, 0.32);
+    --color-accent: #7fbf8e;
+    --color-glow: rgba(127, 191, 142, 0.22);
+    --color-on-accent: #141414;
+    --color-primary: var(--color-text);
+    --color-on-primary: #141414;
+    --color-scrim: rgba(10, 10, 10, 0.85);
+    --color-nav-bg: rgba(20, 20, 20, 0.78);
+
+    // Typography
+    --font-display: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+    --font-body: var(--font-display);
+    --font-mono: ui-monospace, "SF Mono", Menlo, monospace;
+
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.25rem;
+    --text-xl: clamp(1.375rem, 1rem + 1.6vw, 2rem);
+    --text-2xl: clamp(1.75rem, 1.2rem + 2.4vw, 3rem);
+    --text-3xl: clamp(2.25rem, 1.4rem + 4vw, 4.5rem);
+    --text-headline: clamp(2rem, 1.2rem + 3.4vw, 3.75rem);
+
+    --weight-light: 300;
+    --weight-regular: 400;
+    --weight-medium: 500;
+    --weight-bold: 700;
+    --weight-heavy: 900;
+
+    --leading-tight: 0.9;
+    --leading-snug: 1.2;
+    --leading-body: 1.6;
+
+    --tracking-tight: -0.035em;
+    --tracking-snug: -0.015em;
+
+    // Spacing
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.5rem;
+    --space-6: 2rem;
+    --space-7: 3rem;
+    --space-8: 4rem;
+    --space-9: 6rem;
+    --space-10: 8rem;
+
+    --gutter: clamp(1.25rem, 4vw, 3rem);
+    --content-max: 80rem;
+    --prose-max: 62ch;
+    --nav-height: 4rem;
+    --tap-min: 44px;
+
+    // Radius
+    --radius-sm: 4px;
+    --radius-md: 10px;
+    --radius-lg: 20px;
+    --radius-pill: 9999px;
+
+    // Elevation
+    --shadow-raised: 0 24px 48px -24px rgba(0, 0, 0, 0.8);
+
+    // Motion
+    --duration-fast: 150ms;
+    --duration-base: 250ms;
+    --duration-slow: 600ms;
+    --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+
+    // Layering
+    --z-base: 0;
+    --z-texture: 1;
+    --z-nav: 100;
+    --z-skip: 200;
+
+    // Focus
+    --focus-ring: 2px solid var(--color-accent);
+    --focus-offset: 3px;
+}

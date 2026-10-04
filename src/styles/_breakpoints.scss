@@ -1,0 +1,10 @@
+// Media queries cannot read custom properties, so breakpoints live in Sass.
+$bp-sm: 480px;
+$bp-md: 768px;
+$bp-lg: 1024px;
+
+@mixin up($bp) {
+    @media (min-width: $bp) {
+        @content;
+    }
+}

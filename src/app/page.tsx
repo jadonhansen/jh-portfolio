@@ -1,29 +1,21 @@
-"use client";
-
-import Navbar from "@/components/NavBar";
-import LinksBar from "@/components/LinksBar";
-import Navigation from "@/components/Navigation";
-import { useState } from "react";
-import { ComponentProps } from "@/types/interfaces";
+import Footer from "@/components/Footer";
+import Hero from "@/components/Hero";
+import NavBar from "@/components/NavBar";
+import OffTheClock from "@/components/OffTheClock";
+import Work from "@/components/Work";
 
 
 export default function Page() {
-
-    const [pages, setPages] = useState<ComponentProps>({ current: "home", previous: "home" });
-
-    const changePage = (page: string) => {
-        setPages({ current: page, previous: pages.current });
-    };
-
     return (
-        <div className="appContainer">
-            <Navbar
-                current={pages.current}
-                previous={pages.previous}
-                changePage={changePage}
-            />
-            <LinksBar />
-            <Navigation current={pages.current} previous={pages.previous} />
-        </div>
+        <>
+            <a className="skip-link" href="#main">skip to content</a>
+            <NavBar />
+            <main id="main">
+                <Hero />
+                <Work />
+                <OffTheClock />
+            </main>
+            <Footer />
+        </>
     );
 }
