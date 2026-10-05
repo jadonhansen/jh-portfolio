@@ -8,10 +8,10 @@ import ocCollection from "@/assets/images/oc-mockup-02.jpg";
 import ocDetail from "@/assets/images/oc-mockup-03.jpg";
 import ocValue from "@/assets/images/oc-mockup-04.jpg";
 import ocLiveDrive from "@/assets/images/oc-mockup-05.jpg";
-import apps from "@/assets/images/apps-1.png";
+import digiWallet from "@/assets/images/apps-1.png";
 import scraperLanding from "@/assets/images/scraper-01.jpg";
 import scraperStats from "@/assets/images/scraper-02.jpg";
-import desk from "@/assets/images/w-2.jpg";
+import weather from "@/assets/images/w-2.jpg";
 import surf from "@/assets/images/ig.jpg";
 import prelude from "@/assets/images/prelude.jpg";
 
@@ -30,20 +30,20 @@ export interface LinkItem {
     icon?: IconType;
 }
 
-export interface ShippedApp {
-    name: string;
-    blurb?: string;
+export interface StoreLinks {
     appStore: string;
     playStore: string;
 }
 
 interface ProjectBase {
     id: string;
+    // Small label above the title, such as the category the project belongs to.
+    eyebrow?: string;
     title: string;
     description: string;
-    link: LinkItem;
+    stores?: StoreLinks;
+    link?: LinkItem;
     secondaryLink?: LinkItem;
-    apps?: ShippedApp[];
 }
 
 // A project shows one photo, a scrollable row of app screens, or a base screenshot with a detail overlapping it.
@@ -52,6 +52,22 @@ export type Project = ProjectBase & (
     | { screens: Photo[] }
     | { layered: { base: Photo; overlay: Photo } }
 );
+
+// Several projects under one category, sharing an intro line and one link.
+export interface ProjectGroup {
+    id: string;
+    category: string;
+    intro: string;
+    link: LinkItem;
+    projects: Project[];
+}
+
+export interface SupportingNote {
+    title: string;
+    description: string;
+    link: LinkItem;
+    secondaryLink?: LinkItem;
+}
 
 export interface Channel {
     platform: string;
@@ -109,9 +125,10 @@ const ocScreen = (src: StaticImageData, headline: string): Photo => ({
     alt: `${headline}, Owners Circle app screen`,
 });
 
-export const PROJECTS: Project[] = [
+export const PROJECTS: (Project | ProjectGroup)[] = [
     {
         id: "owners-circle",
+        eyebrow: "Latest venture",
         title: "Owners Circle",
         description: "Take your automotive experience to the next level with Owners Circle by joining runs with real-time tracking, personalised collection management and club management.",
         screens: [
@@ -125,33 +142,44 @@ export const PROJECTS: Project[] = [
     },
     {
         id: "mobile-apps",
-        title: "My mobile apps",
-        description: "iOS and Android apps, built with React Native and Expo.",
-        image: {
-            src: apps,
-            alt: "Two phones, one showing DigiWallet's list of loyalty card presets.",
-            fit: "contain",
-        },
+        category: "My mobile apps",
+        intro: "iOS and Android apps, built with React Native and Expo.",
         link: { label: "apps portfolio", href: URLS.apps },
-        apps: [
+        projects: [
             {
-                name: "Weatherly",
-                blurb: "the weather, without the complicated graphs",
-                appStore: "https://apps.apple.com/za/app/weatherly/id1583456822",
-                playStore: "https://play.google.com/store/apps/details?id=com.jadonhansen.weatherly",
+                id: "weatherly",
+                title: "Weatherly",
+                description: "Weatherly was designed for the user who doesn't have time to interpret complicated graphs and weather statistics. It covers the weather at your current location, 24 hour and 7 day forecasts, and location search with an interactive map.",
+                image: {
+                    src: weather,
+                    alt: "Hands holding a phone running a weather app over a desk with a laptop, a cactus and a smartwatch.",
+                },
+                stores: {
+                    appStore: "https://apps.apple.com/za/app/weatherly/id1583456822",
+                    playStore: "https://play.google.com/store/apps/details?id=com.jadonhansen.weatherly",
+                },
             },
             {
-                name: "DigiWallet",
-                blurb: "your barcoded loyalty cards, in one place",
-                appStore: "https://apps.apple.com/us/app/digiwallet/id1593438301",
-                playStore: "https://play.google.com/store/apps/details?id=com.digiwalletapp.digiwallet",
+                id: "digiwallet",
+                title: "DigiWallet",
+                description: "Digitally store all of your barcoded loyalty, rewards or club cards. Add, edit and find a card quickly, then display it at the till.",
+                image: {
+                    src: digiWallet,
+                    alt: "Two phones, one showing DigiWallet's list of loyalty card presets.",
+                    fit: "contain",
+                },
+                stores: {
+                    appStore: "https://apps.apple.com/us/app/digiwallet/id1593438301",
+                    playStore: "https://play.google.com/store/apps/details?id=com.digiwalletapp.digiwallet",
+                },
             },
         ],
     },
     {
         id: "instagram-scraper",
-        title: "Open source",
-        description: "Featuring IG Scraplytics, which shows who really engages with your Instagram: the followers who never interact, the fans who don't follow back, and the accounts that stopped following you. Everything runs locally from your own logged-in browser.",
+        eyebrow: "Open source",
+        title: "IG Scraplytics",
+        description: "Shows who really engages with your Instagram: the followers who never interact, the fans who don't follow back, and the accounts that stopped following you. Everything runs locally from your own logged-in browser.",
         layered: {
             base: { src: scraperLanding, alt: "IG Scraplytics landing page" },
             overlay: { src: scraperStats, alt: "IG Scraplytics dashboard stats" },
@@ -159,18 +187,14 @@ export const PROJECTS: Project[] = [
         link: { label: "view instagram-scraper", href: URLS.instagramScraper },
         secondaryLink: { label: "more on github", href: URLS.github },
     },
-    {
-        id: "experience",
-        title: "Experience",
-        description: "LinkedIn has the employers, the dates and the job titles, so this page does not have to.",
-        image: {
-            src: desk,
-            alt: "Hands holding a phone running a weather app over a desk with a laptop, a cactus and a smartwatch.",
-        },
-        link: { label: "view linkedin", href: URLS.linkedin },
-        secondaryLink: { label: "get in touch", href: `#${SECTION_IDS.contact}` },
-    },
 ];
+
+export const EXPERIENCE: SupportingNote = {
+    title: "Experience",
+    description: "LinkedIn has the employers, the dates and the job titles, so this page does not have to.",
+    link: { label: "view linkedin", href: URLS.linkedin },
+    secondaryLink: { label: "get in touch", href: `#${SECTION_IDS.contact}` },
+};
 
 
 const INSTAGRAM: Channel = {

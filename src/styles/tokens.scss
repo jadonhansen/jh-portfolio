@@ -31,6 +31,9 @@
     --text-2xl: clamp(1.75rem, 1.2rem + 2.4vw, 3rem);
     --text-3xl: clamp(2.25rem, 1.4rem + 4vw, 4.5rem);
     --text-headline: clamp(2rem, 1.2rem + 3.4vw, 3.75rem);
+    --text-headline-aside: clamp(1.25rem, 0.9rem + 1.4vw, 1.75rem);
+    // Product names inside a group, one step below a standalone project title.
+    --text-product: clamp(1.25rem, 1.05rem + 0.9vw, 1.5rem);
 
     --weight-light: 300;
     --weight-regular: 400;
@@ -39,7 +42,9 @@
     --weight-heavy: 900;
 
     --leading-tight: 0.9;
+    --leading-display: 1.1;
     --leading-snug: 1.2;
+    --leading-aside: 1.4;
     --leading-body: 1.6;
 
     --tracking-tight: -0.035em;
@@ -56,6 +61,16 @@
     --space-8: 4rem;
     --space-9: 6rem;
     --space-10: 8rem;
+
+    // Rhythm: tight inside a thought, moderate between the parts of a project, generous between projects.
+    --gap-eyebrow: var(--space-1);
+    --gap-heading: var(--space-3);
+    --gap-actions: var(--space-5);
+    --gap-media: var(--space-5);
+    --gap-products: var(--space-7);
+    --gap-projects: calc(var(--space-8) + var(--space-4));
+    --gap-intro: var(--space-6);
+    --gap-intro-wide: var(--space-8);
 
     --gutter: clamp(1.25rem, 4vw, 3rem);
     --content-max: 80rem;
