@@ -50,9 +50,11 @@
     justify-items: start;
 }
 
+// Matches the section labels above it.
 .footer__heading {
+    color: var(--color-accent);
     font-size: var(--text-lg);
-    font-weight: var(--weight-bold);
+    font-weight: var(--weight-medium);
 }
 
 .footer__line {

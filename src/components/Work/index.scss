@@ -2,30 +2,56 @@
 
 .work__list {
     display: grid;
-    gap: calc(var(--space-8) + var(--space-4));
+    gap: var(--gap-projects);
 }
 
-.project {
+// Wide screens share a 12-column frame. Rows alternate halves; groups and the supporting strip span columns 2 to 11.
+.project,
+.project-group,
+.supporting {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
-    gap: var(--space-6);
 
     @include up($bp-lg) {
         grid-template-columns: repeat(12, minmax(0, 1fr));
+        column-gap: var(--space-6);
+    }
+}
+
+.project {
+    gap: var(--gap-media);
+
+    @include up($bp-lg) {
         align-items: center;
-        gap: var(--space-6);
+
+        > .project__visual {
+            grid-row: 1;
+            grid-column: 2 / span 5;
+            justify-self: center;
+        }
+
+        > .project__body {
+            grid-row: 1;
+            grid-column: 7 / span 5;
+        }
+    }
+}
+
+.project--flip {
+    @include up($bp-lg) {
+        > .project__visual {
+            grid-column: 7 / span 5;
+        }
+
+        > .project__body {
+            grid-column: 2 / span 5;
+        }
     }
 }
 
 .project__visual {
     width: 100%;
     max-width: 28rem;
-
-    @include up($bp-lg) {
-        grid-row: 1;
-        grid-column: 2 / span 5;
-        justify-self: center;
-    }
 }
 
 .project__media {
@@ -123,26 +149,26 @@
 
 .project__body {
     display: grid;
-    gap: var(--space-5);
+    gap: var(--gap-actions);
     justify-items: start;
-
-    @include up($bp-lg) {
-        grid-row: 1;
-        grid-column: 7 / span 5;
-    }
 }
 
-// Every second project mirrors the layout: text left, image right.
-.project:nth-child(even) {
-    @include up($bp-lg) {
-        .project__visual {
-            grid-column: 7 / span 5;
-        }
+.project__text {
+    display: grid;
+    gap: var(--gap-heading);
+}
 
-        .project__body {
-            grid-column: 2 / span 5;
-        }
-    }
+.project__heading {
+    display: grid;
+    gap: var(--gap-eyebrow);
+}
+
+.project__eyebrow {
+    color: var(--color-text-muted);
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-medium);
+    line-height: var(--leading-snug);
 }
 
 .project__title {
@@ -151,50 +177,24 @@
     letter-spacing: var(--tracking-snug);
 }
 
+.project__title--product {
+    font-size: var(--text-product);
+}
+
 .project__description {
     max-width: var(--prose-max);
     color: var(--color-text-muted);
 }
 
-.project__apps {
-    display: grid;
-    width: 100%;
-    border-top: 1px solid var(--color-line);
-}
-
-.app {
-    display: grid;
-    gap: var(--space-2);
-    padding-block: var(--space-3);
-    border-bottom: 1px solid var(--color-line);
-
-    @include up($bp-sm) {
-        grid-template-columns: minmax(0, 1fr) auto;
-        align-items: center;
-        gap: var(--space-4);
-    }
-}
-
-.app__text {
-    display: grid;
-}
-
-.app__name {
-    font-weight: var(--weight-medium);
-}
-
-.app__blurb {
-    color: var(--color-text-subtle);
-    font-size: var(--text-sm);
-}
-
-.app__stores {
+// The negative block margin cancels the 44px hit area's extra height, so the visible gap matches the other actions.
+.project__stores {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--space-1) var(--space-4);
+    gap: 0 var(--space-5);
+    margin-block: calc((var(--text-sm) * var(--leading-body) - var(--tap-min)) / 2);
 }
 
-.app__store {
+.project__store {
     display: inline-flex;
     align-items: center;
     gap: var(--space-2);
@@ -217,5 +217,83 @@
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-3);
-    margin-top: var(--space-2);
+}
+
+// Category header, then its products: two up from tablet width, stacked below that.
+.project-group {
+    row-gap: var(--gap-intro);
+}
+
+.project-group__head,
+.project-group__list {
+    @include up($bp-lg) {
+        grid-column: 2 / span 10;
+    }
+}
+
+.project-group__head {
+    display: grid;
+    gap: var(--gap-actions);
+    justify-items: start;
+
+    @include up($bp-md) {
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: end;
+        column-gap: var(--space-6);
+    }
+}
+
+.project-group__text {
+    display: grid;
+    gap: var(--space-2);
+}
+
+.project-group__list {
+    display: grid;
+    gap: var(--gap-products);
+
+    @include up($bp-md) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: var(--space-6);
+    }
+}
+
+.product {
+    display: grid;
+    gap: var(--gap-media);
+    align-content: start;
+
+    .project__visual {
+        max-width: none;
+    }
+}
+
+// Experience: a compact closing strip with no image.
+.supporting__inner {
+    display: grid;
+    gap: var(--gap-actions);
+    justify-items: start;
+    padding-top: var(--space-6);
+    border-top: 1px solid var(--color-line);
+
+    @include up($bp-md) {
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: center;
+        column-gap: var(--space-6);
+    }
+
+    @include up($bp-lg) {
+        grid-column: 2 / span 10;
+    }
+}
+
+.supporting__text {
+    display: grid;
+    gap: var(--space-2);
+}
+
+.supporting__title {
+    font-size: var(--text-lg);
+    font-weight: var(--weight-bold);
+    letter-spacing: var(--tracking-snug);
 }
